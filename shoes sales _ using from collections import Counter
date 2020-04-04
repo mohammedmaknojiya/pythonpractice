@@ -1,0 +1,19 @@
+
+x=int(input()) #no of sizes available
+
+l=list(map(int,input().split())) #list of inputs sizes
+
+n=int(input()) #no of customers 
+
+m=[] #money earned
+
+
+for i in range(n):
+    size,money=map(int,input().split())
+    if size in l:
+        m.append(money)
+        l.remove(size)
+        
+        
+
+print(sum(m))
