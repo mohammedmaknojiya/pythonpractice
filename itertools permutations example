@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+st,size=input().split()
+size=int(size)
+l=list(map(list,permutations(st,size)))
+#print(l)
+m=[]
+for i in l:
+    #i=list(i)
+    #i.sort()
+    k="".join(i)
+    m.append(k)
+m.sort()
+for i in m:
+    print(i)
