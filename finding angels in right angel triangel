@@ -1,0 +1,64 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math as m
+ab=int(input())
+bc=int(input())
+#ab=1
+#bc=100
+r=m.sqrt(pow(ab,2)+pow(bc,2))
+#print(r)
+r_by_2=r/2
+#print(r_by_2)
+
+angel_p=m.atan(ab/bc)
+#print(angel_p)
+
+x=m.sin(angel_p)*bc
+#print(x)
+
+k=m.cos(angel_p)*bc
+#print(k)
+
+y=abs(r_by_2-k)
+#print(y)
+
+alpha=m.degrees(m.atan(y/x))
+#print(alpha)
+
+thitha=180-90-m.degrees(angel_p)
+#print(thitha)
+
+an=thitha+alpha
+
+frac, whole = m.modf(an)
+if frac>=0.5:
+    an=an+1
+print(str(int(an))+'°')
+
+#print(an)
+
+code not work properly for all case
+
+
+####################################################optimized code ######################################
+import math 
+AB = int(input()) 
+BC = int(input()) 
+print (str(int(round(math.degrees(math.atan2(AB,BC)))))+'°')
+
+
+#note
+
+#by property of intercept in right angel triangel
+#here two equilateral triangels form
+
+#  1 ABM   2 BMC
+#  now bmc is equilateral hence BM=MC
+# hence opposite angels are also equal
+#hence angel mbc is equal to angel mcb
+
+#from big triangel abc we can find angel acb which is equal to mcb
+
+# hence because mbc=mcb
+
+
+#hence we found angel
