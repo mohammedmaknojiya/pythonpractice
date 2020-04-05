@@ -1,0 +1,15 @@
+from datetime import datetime as dt
+
+
+fmt = '%a %d %b %Y %H:%M:%S %z'
+for i in range(int(input())):
+    print(int(abs((dt.strptime(input(), fmt) - 
+                   dt.strptime(input(), fmt)).total_seconds())))
+
+
+# %a represents day of week from Sun-Sat
+# %d represents date of a month , leading zero needed 01-02-03- ....-31
+# %b
+
+#https://downloads.haskell.org/~ghc/6.12.1/docs/html/libraries/time-1.1.4/Data-Time-Format.html
+#go to this website for documentations
