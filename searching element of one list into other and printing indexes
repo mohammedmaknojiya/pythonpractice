@@ -1,0 +1,17 @@
+m,n=map(int,input().split()) #taking 5,2
+l=[] #list a
+k=[] #list b
+for _ in range(m):
+    l.append(input())
+for _ in range(n):
+    k.append(input())
+
+for i in k:
+    m = []
+    for j in range(len(l)):
+        if l[j]==i:
+            m.append(j+1)
+    if len(m)==0:
+        print(-1)
+    else:
+        print(*m)
