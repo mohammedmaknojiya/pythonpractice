@@ -1,0 +1,9 @@
+from collections import Counter
+n=int(input())
+a=list(map(int,input().split()))
+diction=Counter(a)
+#print(diction)
+
+for i,v in diction.items():
+    if v<2:
+        print(i)
