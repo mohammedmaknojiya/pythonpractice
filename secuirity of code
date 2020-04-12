@@ -1,0 +1,22 @@
+import string
+m=input()
+st=int(input())
+l=list(enumerate(string.ascii_lowercase[:26],st))
+m=list(m)
+#print(m)
+d={}
+q=[]
+sum=0
+for i in l:
+    d1={i[0]:i[1]}
+    d.update(d1)
+#print(d)
+for i in m:
+    for  j,v in d.items():
+        if v==i:
+            k=j%26
+            q.append(k)
+su=0
+for i in q:
+    su=su+i
+print(su)
