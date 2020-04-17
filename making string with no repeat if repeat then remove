@@ -1,0 +1,20 @@
+q=int(input())
+
+
+from itertools import groupby
+#s="mmrra"
+for i in range(q):
+    s=input()
+    m=groupby(s)
+    k=[]
+
+    l=[(len(list(j)),i) for i,j in groupby(s)]
+
+    for i in l:
+        c=0
+        q=list(i)
+        if q[0]>1:
+            c=c+(q[0]-1)
+        k.append(c)
+
+    print(sum(k))
