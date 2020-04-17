@@ -1,0 +1,16 @@
+n=int(input())
+k=[]
+for i in range(n):
+    name,score=input().split()
+
+    l=[int(score),name]
+    k.append(l)
+#print(k)
+m=[]
+k.sort(reverse=True)
+from operator import itemgetter
+k.sort(key=itemgetter(1))
+k.sort(key=itemgetter(0), reverse=True)
+for i in range(len(k)):
+
+    print(k[i][1] ,k[i][0] )
