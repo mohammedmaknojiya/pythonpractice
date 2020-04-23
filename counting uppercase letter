@@ -1,0 +1,8 @@
+import string
+s=string.ascii_uppercase
+count=1
+a=input()
+for i in range(len(a)):
+    if a[i] in s:
+        count+=1
+print(count)
