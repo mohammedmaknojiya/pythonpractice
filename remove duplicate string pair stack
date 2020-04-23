@@ -1,0 +1,13 @@
+l = []  # stack
+s = input()
+for i in range(len(s)):
+
+    if len(l)!=0 and s[i] == l[-1] :
+        l.pop()
+    else:
+        l.append(s[i])
+if len(l)==0:
+    print("Empty String")
+else:
+    st="".join(l)
+    print(st)
