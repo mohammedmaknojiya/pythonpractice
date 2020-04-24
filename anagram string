@@ -1,0 +1,33 @@
+from collections import Counter
+
+
+for i in range(int(input())):
+    s=input()
+
+
+    #if len(s)==1:
+
+
+    if len(s)%2!=0:
+        print(-1)
+
+    else:
+        s1=s[0:len(s)//2]
+        s2=s[len(s)//2:]
+
+        d1=Counter(s1)
+        d2=Counter(s2)
+
+        count=0
+
+        for i,v in d2.items():
+            if i not in d1:
+                count+=v
+
+            elif i in d1:
+                c=d1[i]
+                if v>=c:
+                    count=count+abs(v-c)
+        print(count)
+
+
