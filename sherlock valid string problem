@@ -1,0 +1,46 @@
+from collections import Counter
+s1=input()
+
+d1=Counter(s1)
+
+m=list(d1.values())
+#print(m)
+
+
+
+def checkequal(m):
+    n=m
+    if 0 in n:
+        n[n.index(0)]=max(m)
+    
+    k=set(n)
+    if len(k)==1:
+        return True
+    else:
+        return False
+l=[]
+
+if len(set(m))==1:
+    print("YES")
+
+else:
+
+    for i in range(len(m)):
+
+        m[i]= m[i]-1
+
+        #print("m",m)
+        if checkequal(m)==True:
+
+            m[i] = m[i] + 1
+            print("YES")
+            break
+        else:
+            m[i]=m[i]+1
+        if i==len(m)-1:
+            print("NO")
+
+
+
+
+
