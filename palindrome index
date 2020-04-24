@@ -18,16 +18,19 @@ for k in range(n):
         for i in range(len(s)//2):
             if s[i] != s[len(s)-1-i]:
 
-                ne=s[0:i]+s[i+1:]
-                ne1 = s[0:len(s) - i - 1] + s[len(s) - i:]
-
+                #ne=s[0:i]+s[i+1:]
+                ne1 = s[i:len(s)-i-1]
+                ne=s[i+1:len(s)-i]
+                #ne1=s[]
 
                 if pal(ne) == True:
                     print(i)
+                    break
 
 
                 elif pal(ne1)== True:
 
                     print(len(s)-1-i)
+                    break
             elif (i==len(s)//2):
                 print(-1)
