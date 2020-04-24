@@ -1,0 +1,33 @@
+n = int(input())
+
+
+def pal(s):
+    l = s
+    rev = l[::-1]
+    return l == rev
+
+
+for k in range(n):
+    s = input()
+
+    if pal(s) == True:
+        print(-1)
+
+
+    else:
+        for i in range(len(s)//2):
+            if s[i] != s[len(s)-1-i]:
+
+                ne=s[0:i]+s[i+1:]
+                ne1 = s[0:len(s) - i - 1] + s[len(s) - i:]
+
+
+                if pal(ne) == True:
+                    print(i)
+
+
+                elif pal(ne1)== True:
+
+                    print(len(s)-1-i)
+            elif (i==len(s)//2):
+                print(-1)
