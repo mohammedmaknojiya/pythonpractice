@@ -1,0 +1,13 @@
+l=[3,3]
+k=4
+
+def find(l,k):
+    dic={}
+    for i in l:
+        if i in dic:
+            return True
+        dic.setdefault(k-i)
+        print(dic)
+    return False
+
+print(find(l,k))
